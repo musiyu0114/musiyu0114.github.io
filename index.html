@@ -249,7 +249,7 @@
                             &nbsp;
                             工具
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/hive%E5%AE%89%E8%A3%85/">hive安装</a></li>  <li class="file"><a href="/wiki/Git%E5%AE%89%E8%A3%85/">Git安装</a></li>  <li class="file"><a href="/wiki/Docker%E5%AE%89%E8%A3%85/">Docker安装</a></li>  <li class="file"><a href="/wiki/Spark-local%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">Spark-local环境部署</a></li>  <li class="file"><a href="/wiki/Spark-StandAlone%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">Spark-StandAlone环境部署</a></li>  <li class="file"><a href="/wiki/Spark-HA%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">Spark-HA环境部署</a></li>  <li class="file"><a href="/wiki/YARN%E6%A8%A1%E5%BC%8F/">YARN模式</a></li>  <li class="file"><a href="/wiki/pyspark%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A0%81%E7%8E%AF%E5%A2%83/">pyspark基础编码环境</a></li>  <li class="file"><a href="/wiki/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">kafka命令行操作</a></li>  <li class="file"><a href="/wiki/kafkaAPI%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/">kafkaAPI操作方法</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/hive%E5%AE%89%E8%A3%85/">hive安装</a></li>  <li class="file"><a href="/wiki/Git%E5%AE%89%E8%A3%85/">Git安装</a></li>  <li class="file"><a href="/wiki/Docker%E5%AE%89%E8%A3%85/">Docker安装</a></li>  <li class="file"><a href="/wiki/Spark-local%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">Spark-local环境部署</a></li>  <li class="file"><a href="/wiki/Spark-StandAlone%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">Spark-StandAlone环境部署</a></li>  <li class="file"><a href="/wiki/Spark-HA%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">Spark-HA环境部署</a></li>  <li class="file"><a href="/wiki/YARN%E6%A8%A1%E5%BC%8F/">YARN模式</a></li>  <li class="file"><a href="/wiki/pyspark%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A0%81%E7%8E%AF%E5%A2%83/">pyspark基础编码环境</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -258,7 +258,7 @@
                             &nbsp;
                             工具2
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">kafka环境配置</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">kafka环境配置</a></li>  <li class="file"><a href="/wiki/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/">kafka命令行操作</a></li>  <li class="file"><a href="/wiki/kafkaAPI%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/">kafkaAPI操作方法</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/wiki/hello-world/">Hello World</a></li>  </ul> 
     </div>
@@ -342,7 +342,7 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+        <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B72/">工具2</a>
     </div>
 
                         
@@ -396,10 +396,33 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h2 id="ZooKeeper-JavaAPI-操作"><a href="#ZooKeeper-JavaAPI-操作" class="headerlink" title="ZooKeeper JavaAPI 操作"></a>ZooKeeper JavaAPI 操作</h2><p>（1）建立连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">client = CuratorFrameworkFactory.builder()</span><br><span class="line"></span><br><span class="line">​        .connectString(<span class="string">&quot;192.168.88.161:2181&quot;</span>)</span><br><span class="line"></span><br><span class="line">​        .sessionTimeoutMs(60 * 1000)</span><br><span class="line"></span><br><span class="line">​        .connectionTimeoutMs(15 * 1000)</span><br><span class="line"></span><br><span class="line">​        .retryPolicy(retryPolicy)</span><br><span class="line"></span><br><span class="line">​        .namespace(<span class="string">&quot;bigdata&quot;</span>)</span><br><span class="line"></span><br><span class="line">​        .build();</span><br><span class="line"></span><br><span class="line">​    client.start();</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps61.jpg" alt="img"> </p>
+<p>（2）创建节点（带有数据）</p>
+<p>
+                
             
         
         
-            
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/wiki/kafkaAPI%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/#more">Read More</a>
             </div>
         
         <footer class="article-footer">
@@ -423,7 +446,7 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+        <a class="article-category-link" href="/categories/%E5%B7%A5%E5%85%B72/">工具2</a>
     </div>
 
                         
@@ -477,10 +500,33 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h2 id="kafka命令行操作"><a href="#kafka命令行操作" class="headerlink" title="kafka命令行操作"></a>kafka命令行操作</h2><p>1）创建topic</p>
+<p>基本方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./kafka-topics.sh --create --topic tpc_1 --partitions 2 --replication-factor 2 --zookeeper node1:2181</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps44.jpg" alt="img"> </p>
+<p>
+                
             
         
         
-            
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/wiki/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/#more">Read More</a>
             </div>
         
         <footer class="article-footer">
