@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-09T01:13:12.000Z</updated>
+  <updated>2023-06-16T01:14:38.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kafkaAPI操作方法</title>
+    <link href="http://example.com/wiki/kafkaAPI%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/wiki/kafkaAPI%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/</id>
+    <published>2023-06-16T01:02:01.000Z</published>
+    <updated>2023-06-16T01:14:38.000Z</updated>
+    
+    
+    
+    
+    <category term="工具" scheme="http://example.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="搭建" scheme="http://example.com/tags/%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kafka命令行操作</title>
+    <link href="http://example.com/wiki/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/"/>
+    <id>http://example.com/wiki/kafka%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%93%8D%E4%BD%9C/</id>
+    <published>2023-06-16T01:01:29.000Z</published>
+    <updated>2023-06-16T01:13:58.000Z</updated>
+    
+    
+    
+    
+    <category term="工具" scheme="http://example.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="搭建" scheme="http://example.com/tags/%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kafka环境配置</title>
+    <link href="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-06-16T01:00:50.000Z</published>
+    <updated>2023-06-19T00:28:00.000Z</updated>
+    
+    
+    
+    
+    <category term="工具2" scheme="http://example.com/categories/%E5%B7%A5%E5%85%B72/"/>
+    
+    
+    <category term="搭建" scheme="http://example.com/tags/%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="kafka" scheme="http://example.com/tags/kafka/"/>
+    
+  </entry>
   
   <entry>
     <title>pyspark基础编码环境</title>
