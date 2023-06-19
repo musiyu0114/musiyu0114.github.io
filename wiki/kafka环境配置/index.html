@@ -9,17 +9,43 @@
         <meta name="keywords" content="搭建,kafka">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="article">
+    <meta name="description" content="zookeeper安装安装前需要安装好jdk，检测集群时间是否同步，检测防火墙是否关闭，检测主机 ip映射有没有配置 （1）在node1上切换到 &#x2F;export&#x2F;server 目录下，上传zookeeper压缩包并解压，设置一个软连接。 切换到server目录下： 1cd &#x2F;export&#x2F;server  解压zookeeper压缩包： 1tar -zxvf zookeeper.">
+<meta property="og:type" content="article">
 <meta property="og:title" content="kafka环境配置">
 <meta property="og:url" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="zookeeper安装安装前需要安装好jdk，检测集群时间是否同步，检测防火墙是否关闭，检测主机 ip映射有没有配置 （1）在node1上切换到 &#x2F;export&#x2F;server 目录下，上传zookeeper压缩包并解压，设置一个软连接。 切换到server目录下： 1cd &#x2F;export&#x2F;server  解压zookeeper压缩包： 1tar -zxvf zookeeper.">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps1.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps2.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps3.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps4.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps5.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps6.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps7.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps8.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps9.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps10.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps11.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps12.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps13.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps14.jpg">
+<meta property="og:image" content="file:///C:/Users/ADMINI~1/AppData/Local/Temp/ksohtml18224/wps15.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps16.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps17.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps18.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps19.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps20.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps21.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps22.jpg">
+<meta property="og:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps23.jpg">
 <meta property="article:published_time" content="2023-06-16T01:00:50.000Z">
-<meta property="article:modified_time" content="2023-06-19T00:28:00.000Z">
+<meta property="article:modified_time" content="2023-06-19T00:59:38.000Z">
 <meta property="article:author" content="musiyu">
 <meta property="article:tag" content="搭建">
 <meta property="article:tag" content="kafka">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/wiki/kafka%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/wps1.jpg">
     
 
     
@@ -396,7 +422,145 @@
             
         
         
-            
+            <h2 id="zookeeper安装"><a href="#zookeeper安装" class="headerlink" title="zookeeper安装"></a><strong>zookeeper安装</strong></h2><p>安装前需要安装好jdk，检测集群时间是否同步，检测防火墙是否关闭，检测主机 ip映射有没有配置</p>
+<p>（1）在node1上切换到 &#x2F;export&#x2F;server 目录下，上传zookeeper压缩包并解压，设置一个软连接。</p>
+<p>切换到server目录下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /export/server</span><br></pre></td></tr></table></figure>
+
+<p>解压zookeeper压缩包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf zookeeper.tar.gz -C /export/server/  </span><br></pre></td></tr></table></figure>
+
+<p>设置软连接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s  /export/server/zookeeper-3.4.6/ zookeeper</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps1.jpg" alt="img"> </p>
+<ol>
+<li>修改环境变量（三台都修改）</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> ZOOKEEPER_HOME=/export/server/zookeeper</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$ZOOKEEPER_HOME</span>/bin</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps2.jpg" alt="img"> </p>
+<ol start="2">
+<li><p>修改zookeeper配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server/zookeeper/conf/  切换到conf/目录下</span><br><span class="line"></span><br><span class="line">cp zoo_sample.cfg zoo.cfg  复制zoo_sample.cfg文件，文件名为zoo.cfg</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><img src="wps3.jpg" alt="img">  </p>
+<p>创建文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /export/data/zookeeper/zkdatas/   </span><br></pre></td></tr></table></figure>
+
+<p><img src="wps4.jpg" alt="img"> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim zoo.cfg </span><br></pre></td></tr></table></figure>
+
+<p>填充以下内容：</p>
+<p>#Zookeeper的数据存放目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dataDir = /export/data/zookeeper/zkdatas/</span><br></pre></td></tr></table></figure>
+
+<p># 保留多少个快照</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autopurge.snapRetainCount = 3</span><br></pre></td></tr></table></figure>
+
+<p># 日志多少小时清理一次</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autopurge.purgeInterval = 1</span><br></pre></td></tr></table></figure>
+
+<p># 集群中服务器地址</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">server.1 =node1:2888:3888</span><br><span class="line"></span><br><span class="line">server.2 = node2:2888:3888</span><br><span class="line"></span><br><span class="line">server.3 = node3:2888:3888</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps5.jpg" alt="img"> </p>
+<ol start="3">
+<li>添加myid配置</li>
+</ol>
+<p>在node1主机的&#x2F;export&#x2F;server&#x2F;zookeeper&#x2F;zkdatas&#x2F;这个路径下创建一个文件，文件名为myid ,文件内容为1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /export/data/zookeeper/zkdatas/myid </span><br></pre></td></tr></table></figure>
+
+<p><img src="wps6.jpg" alt="img"> </p>
+<ol start="4">
+<li>安装包分发并修改myid的值</li>
+</ol>
+<p>在node1主机上，将安装包分发到其他机器</p>
+<p>第一台机器上面执行以下两个命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /export/server/</span><br><span class="line"></span><br><span class="line">scp -r /export/server/zookeeper-3.4.6/ root@node2:/export/server/  </span><br><span class="line"></span><br><span class="line">scp -r /export/server/zookeeper-3.4.6/ root@node3:/export/server/  </span><br></pre></td></tr></table></figure>
+
+<p>  建立软连接（node2 node3）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s zookeeper-3.4.6/ zookeeper</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps7.jpg" alt="img"> </p>
+<p><img src="wps8.jpg" alt="img"> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 2 &gt; /export/data/zookeeper/zkdatas/myid  （node2上执行）</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps9.jpg" alt="img"> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 3 &gt; /export/data/zookeeper/zkdatas/myid  （node3上执行）</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps10.jpg" alt="img"> </p>
+<ol start="5">
+<li><p>三台机器启动zookeeper服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">（1）/export/server/zookeeper/bin/zkServer.sh start</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><img src="wps11.jpg" alt="img"> </p>
+<p><img src="wps12.jpg" alt="img"> </p>
+<p><img src="wps13.jpg" alt="img"> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">（2）/export/server/zookeeper/bin/zkServer.sh status 三台主机分别查看启动状态</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps14.jpg" alt="img"><img src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml18224\wps15.jpg" alt="img"> </p>
+<p><img src="wps16.jpg" alt="img"> </p>
+<ol start="6">
+<li>编写一个脚本批量启动node1，2，3的zookeeper</li>
+</ol>
+<p>（1）创建shell目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /export/shell</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps17.jpg" alt="img"> </p>
+<p>（2）再此目录下建立一个zkall.sh文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim zkall.sh</span><br></pre></td></tr></table></figure>
+
+<p>添加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">case $1 in</span><br><span class="line"></span><br><span class="line">&quot;start&quot;)&#123;</span><br><span class="line"></span><br><span class="line">​	for i in node1 node2 node3</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">​		echo ---------- zookeeper $i 启动 ------------</span><br><span class="line"></span><br><span class="line">​		ssh $i &quot;/export/server/zookeeper/bin/zkServer.sh start&quot;</span><br><span class="line"></span><br><span class="line">​	done</span><br><span class="line"></span><br><span class="line">&#125;;;</span><br><span class="line"></span><br><span class="line">&quot;stop&quot;)&#123;</span><br><span class="line"></span><br><span class="line">​	for i in node1 node2 node3</span><br><span class="line"></span><br><span class="line">​	do</span><br><span class="line"></span><br><span class="line">​		echo ---------- zookeeper $i 停止 ------------ </span><br><span class="line"></span><br><span class="line">​		ssh $i &quot;/export/server/zookeeper/bin/zkServer.sh stop&quot;</span><br><span class="line"></span><br><span class="line">​	done</span><br><span class="line"></span><br><span class="line">&#125;;;</span><br><span class="line"></span><br><span class="line">&quot;status&quot;)&#123;</span><br><span class="line"></span><br><span class="line">​	for i in node1 node2 node3</span><br><span class="line"></span><br><span class="line">​	do</span><br><span class="line"></span><br><span class="line">​		echo ---------- zookeeper $i 状态 ------------ </span><br><span class="line"></span><br><span class="line">​		ssh $i &quot;/export/server/zookeeper/bin/zkServer.sh status&quot;</span><br><span class="line"></span><br><span class="line">​	done</span><br><span class="line"></span><br><span class="line">&#125;;;</span><br><span class="line"></span><br><span class="line">Esac</span><br></pre></td></tr></table></figure>
+
+<p>（3）配置zk脚本环境变量、zookeeper的环境变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>#ZOOKEEPER_SHELL_HOME</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export ZKS_HOME=/export/shell/</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$ZKS_HOME</span><br><span class="line"></span><br><span class="line">export ZK_HOME=/export/server/zookeeper</span><br><span class="line"></span><br><span class="line">export PATH=$&#123;ZK_HOME&#125;/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps18.jpg" alt="img"> </p>
+<p>让环境变量生效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>（4） 设置环境路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .bashrc</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps19.jpg" alt="img"> </p>
+<p>（5）增加可执行权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x zkall.sh </span><br></pre></td></tr></table></figure>
+
+<p><img src="wps20.jpg" alt="img"> </p>
+<p>（6）启动测试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zkall.sh start</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps21.jpg" alt="img"> </p>
+<p>查看状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zkall.sh status</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps22.jpg" alt="img"> </p>
+<p>（7）zookeeper服务器常用命令</p>
+<p>启动 ZooKeeper 服务:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh start</span><br></pre></td></tr></table></figure>
+
+<p>查看 ZooKeeper 服务状态:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
+
+<p>停止 ZooKeeper 服务:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh stop </span><br></pre></td></tr></table></figure>
+
+<p>重启 ZooKeeper 服务:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkServer.sh restart </span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>Zookeerper命令操作</li>
+</ol>
+<p>（1）连接ZooKeeper服务端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./zkCli.sh -server node1:2181</span><br></pre></td></tr></table></figure>
+
+<p><img src="wps23.jpg" alt="img"> </p>
+
             </div>
         
         <footer class="article-footer">
